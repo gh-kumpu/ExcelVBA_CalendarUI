@@ -53,11 +53,11 @@ Public Sub Lanuch_CalendarUI( _
     Call Calendar_Show(Left, Top, Height, Width)
 
     
-'    Application.Calculation = xlCalculationAutomatic    '計算を自動に
-'    Application.DisplayAlerts = True                    '確認メッセージを開始
-'    Application.EnableEvents = True                     'イベントを開始
-'    Application.Cursor = xlDefault                      '標準カーソル
-'    Application.ScreenUpdating = True                   '画面描画を開始
+'    Application.Calculation = xlCalculationAutomatic
+'    Application.DisplayAlerts = True
+'    Application.EnableEvents = True
+'    Application.Cursor = xlDefault
+'    Application.ScreenUpdating = True
     
 End Sub
 
