@@ -12,6 +12,8 @@ Private defaultColor As colorElementType
 Private accentColor As colorElementType
 Private shadowColor As Long
 
+Private Const DateFormat As String = "YYYY/M/D"
+
 
 Private Function Init_CalendarUI()
     defaultColor.LightColor = RGB(255, 255, 255)
@@ -24,10 +26,10 @@ Private Function Init_CalendarUI()
     
     ' ==== Date I/O Target Object =====
         ' ---- Cells ----
-        'Set objTargetDate = ActiveSheet.Cells(2, 10)
+        Set objTargetDate = ActiveSheet.Cells(2, 10)
 
         ' ---- Shape ----
-        Set objTargetDate = ActiveSheet.Shapes("shape_00").TextFrame.Characters
+        'Set objTargetDate = ActiveSheet.Shapes("shape_00").TextFrame.Characters
         
 End Function
 
@@ -105,11 +107,11 @@ Public Function Calendar_DayClick_2Times(targetDayPosition As Integer)
     Call Calendar_Delete
     
     On Error GoTo TypeRange
-        objTargetDate.Text = DateSerial(targetYear, targetMonth, targetDay)
+        objTargetDate.Text = Format(DateSerial(targetYear, targetMonth, targetDay), DateFormat)
     Exit Function
 
 TypeRange: ' Range don't have method "Text"
-    objTargetDate.value = DateSerial(targetYear, targetMonth, targetDay)
+    objTargetDate.value = Format(DateSerial(targetYear, targetMonth, targetDay), DateFormat)
     
     
 End Function
@@ -215,7 +217,7 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
             .Line.Visible = msoFalse
             .TextFrame.Characters.Text = Format(CStr(i), "00")
             .TextEffect.FontName = "Meiryo UI"
-            .TextFrame.Characters.Font.Size = pitchX / 2 - pitchX / 8                      '           : サイズ
+            .TextFrame.Characters.Font.Size = pitchX / 2 - pitchX / 8           '           : サイズ
             .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' 横位置    : 中央寄せ
             .TextFrame.VerticalAlignment = xlVAlignCenter                       ' 縦位置    : 中央寄せ
             .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' 横オーバーフロー  : True
@@ -252,7 +254,7 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
             .Line.Visible = msoFalse
             .TextFrame.Characters.Text = arrayWeekDay(i)
             .TextEffect.FontName = "Meiryo UI"
-            .TextFrame.Characters.Font.Size = pitchX / 3                       '           : サイズ
+            .TextFrame.Characters.Font.Size = pitchX / 3                        '           : サイズ
             .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' 横位置    : 中央寄せ
             .TextFrame.VerticalAlignment = xlVAlignCenter                       ' 縦位置    : 中央寄せ
             .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' 横オーバーフロー  : True
