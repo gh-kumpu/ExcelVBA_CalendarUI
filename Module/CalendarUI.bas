@@ -1,5 +1,5 @@
 Attribute VB_Name = "CalendarUI"
-' Macro Apply : [FileName]!'Launch_CalrndarUI (Left, Top, Height, Width)'
+' Macro Apply : '[FileName]'!'Lanuch_CalendarUI [Left],[Top],[Height],[Width]'
 ' If "Top","Left" < 0 then, positioning value center of "Height","Width".
 Private objTargetDate As Variant
 
@@ -217,12 +217,12 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
             .Line.Visible = msoFalse
             .TextFrame.Characters.Text = Format(CStr(i), "00")
             .TextEffect.FontName = "Meiryo UI"
-            .TextFrame.Characters.Font.Size = pitchX / 2 - pitchX / 8           '           : ƒTƒCƒY
-            .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' ‰¡ˆÊ’u    : ’†‰›Šñ‚¹
-            .TextFrame.VerticalAlignment = xlVAlignCenter                       ' cˆÊ’u    : ’†‰›Šñ‚¹
-            .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' ‰¡ƒI[ƒo[ƒtƒ[  : True
-            .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' cƒI[ƒo[ƒtƒ[  : True
-            .TextFrame2.WordWrap = msoFalse                                     ' ‰üs      : False
+            .TextFrame.Characters.Font.Size = pitchX / 2 - pitchX / 8           '           : ã‚µã‚¤ã‚º
+            .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' æ¨ªä½ç½®    : ä¸­å¤®å¯„ã›
+            .TextFrame.VerticalAlignment = xlVAlignCenter                       ' ç¸¦ä½ç½®    : ä¸­å¤®å¯„ã›
+            .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' æ¨ªã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+            .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' ç¸¦ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+            .TextFrame2.WordWrap = msoFalse                                     ' æ”¹è¡Œ      : False
             .Height = pitchY
             .Width = pitchX
             .Top = targetTop + (pitchY * cntY)
@@ -254,12 +254,12 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
             .Line.Visible = msoFalse
             .TextFrame.Characters.Text = arrayWeekDay(i)
             .TextEffect.FontName = "Meiryo UI"
-            .TextFrame.Characters.Font.Size = pitchX / 3                        '           : ƒTƒCƒY
-            .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' ‰¡ˆÊ’u    : ’†‰›Šñ‚¹
-            .TextFrame.VerticalAlignment = xlVAlignCenter                       ' cˆÊ’u    : ’†‰›Šñ‚¹
-            .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' ‰¡ƒI[ƒo[ƒtƒ[  : True
-            .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' cƒI[ƒo[ƒtƒ[  : True
-            .TextFrame2.WordWrap = msoFalse                                     ' ‰üs      : False
+            .TextFrame.Characters.Font.Size = pitchX / 3                        '           : ã‚µã‚¤ã‚º
+            .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' æ¨ªä½ç½®    : ä¸­å¤®å¯„ã›
+            .TextFrame.VerticalAlignment = xlVAlignCenter                       ' ç¸¦ä½ç½®    : ä¸­å¤®å¯„ã›
+            .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' æ¨ªã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+            .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' ç¸¦ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+            .TextFrame2.WordWrap = msoFalse                                     ' æ”¹è¡Œ      : False
             .Height = pitchY
             .Width = pitchX
             .Top = targetTop + (pitchY * 1)
@@ -284,12 +284,12 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
         .TextFrame.Characters.Text = "<"
         .TextFrame.Characters.Font.Bold = True
         .TextEffect.FontName = "Meiryo UI"
-        .TextFrame.Characters.Font.Size = pitchX / 2                        '           : ƒTƒCƒY
-        .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' ‰¡ˆÊ’u    : ’†‰›Šñ‚¹
-        .TextFrame.VerticalAlignment = xlVAlignCenter                       ' cˆÊ’u    : ’†‰›Šñ‚¹
-        .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' ‰¡ƒI[ƒo[ƒtƒ[  : True
-        .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' cƒI[ƒo[ƒtƒ[  : True
-        .TextFrame2.WordWrap = msoFalse                                     ' ‰üs      : False
+        .TextFrame.Characters.Font.Size = pitchX / 2                        '           : ã‚µã‚¤ã‚º
+        .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' æ¨ªä½ç½®    : ä¸­å¤®å¯„ã›
+        .TextFrame.VerticalAlignment = xlVAlignCenter                       ' ç¸¦ä½ç½®    : ä¸­å¤®å¯„ã›
+        .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' æ¨ªã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+        .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' ç¸¦ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+        .TextFrame2.WordWrap = msoFalse                                     ' æ”¹è¡Œ      : False
         .Height = pitchY
         .Width = pitchX
         .Top = targetTop + (pitchY * 0) + (pitchY / 16)
@@ -310,12 +310,12 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
         .TextFrame.Characters.Text = ">"
         .TextFrame.Characters.Font.Bold = True
         .TextEffect.FontName = "Meiryo UI"
-        .TextFrame.Characters.Font.Size = pitchX / 2                        '           : ƒTƒCƒY
-        .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' ‰¡ˆÊ’u    : ’†‰›Šñ‚¹
-        .TextFrame.VerticalAlignment = xlVAlignCenter                       ' cˆÊ’u    : ’†‰›Šñ‚¹
-        .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' ‰¡ƒI[ƒo[ƒtƒ[  : True
-        .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' cƒI[ƒo[ƒtƒ[  : True
-        .TextFrame2.WordWrap = msoFalse                                     ' ‰üs      : False
+        .TextFrame.Characters.Font.Size = pitchX / 2                        '           : ã‚µã‚¤ã‚º
+        .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' æ¨ªä½ç½®    : ä¸­å¤®å¯„ã›
+        .TextFrame.VerticalAlignment = xlVAlignCenter                       ' ç¸¦ä½ç½®    : ä¸­å¤®å¯„ã›
+        .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' æ¨ªã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+        .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' ç¸¦ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+        .TextFrame2.WordWrap = msoFalse                                     ' æ”¹è¡Œ      : False
         .Height = pitchY
         .Width = pitchX
         .Top = targetTop + (pitchY * 0) + (pitchY / 16)
@@ -336,12 +336,12 @@ Private Function Calendar_Show(targetLeft As Single, targetTop As Single, target
         .TextFrame.Characters.Text = CStr(Year(targetDate)) + " . " + CStr(Month(targetDate))
         .TextFrame.Characters.Font.Bold = False
         .TextEffect.FontName = "Meiryo UI"
-        .TextFrame.Characters.Font.Size = pitchX / 2 + pitchX / 16           '           : ƒTƒCƒY
-        .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' ‰¡ˆÊ’u    : ’†‰›Šñ‚¹
-        .TextFrame.VerticalAlignment = xlVAlignCenter                       ' cˆÊ’u    : ’†‰›Šñ‚¹
-        .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' ‰¡ƒI[ƒo[ƒtƒ[  : True
-        .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' cƒI[ƒo[ƒtƒ[  : True
-        .TextFrame2.WordWrap = msoFalse                                     ' ‰üs      : False
+        .TextFrame.Characters.Font.Size = pitchX / 2 + pitchX / 16           '           : ã‚µã‚¤ã‚º
+        .TextFrame.HorizontalAlignment = xlHAlignCenter                     ' æ¨ªä½ç½®    : ä¸­å¤®å¯„ã›
+        .TextFrame.VerticalAlignment = xlVAlignCenter                       ' ç¸¦ä½ç½®    : ä¸­å¤®å¯„ã›
+        .TextFrame.HorizontalOverflow = xlOartHorizontalOverflowOverflow    ' æ¨ªã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+        .TextFrame.VerticalOverflow = xlOartVerticalOverflowOverflow        ' ç¸¦ã‚ªãƒ¼ãƒãƒ¼ãƒ•ãƒ­ãƒ¼  : True
+        .TextFrame2.WordWrap = msoFalse                                     ' æ”¹è¡Œ      : False
         .Height = pitchY
         .Width = pitchX * 3
         .Top = targetTop + (pitchY * 0) + (pitchY / 12)
